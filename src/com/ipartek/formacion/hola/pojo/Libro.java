@@ -28,7 +28,10 @@ public class Libro {
 
 	// constructor con parametros
 	public Libro(String titulo, int numeroPAginas) {
-
+		super();
+		this.setNumeroPaginas(numeroPAginas);
+		this.titulo = titulo;
+		this.autor = "anonimo";
 	}
 
 	// getters y setters
@@ -63,5 +66,10 @@ public class Libro {
 	}
 
 	// otros metodos
+
+	@Override
+	public String toString() {
+		return "Libro [titulo=" + titulo + ", autor=" + autor + ", numeroPaginas=" + numeroPaginas + "]";
+	}
 
 }
