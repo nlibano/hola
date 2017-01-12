@@ -1,48 +1,67 @@
 package com.ipartek.formacion.hola.pojo;
 
-/**
- * Clase {@code Libro} representa un libro.
- *
- */
 public class Libro {
 
-	// Atributos
-	/**
-	 * int numeroPaginas numero paginas que contiene el {@code Libro}
-	 */
-	public int numeroPaginas;
+	// atributos y constantes
+	private String titulo;
+	private String autor;
+	private int numeroPaginas;
 
-	/**
-	 * String nombre nombre del {@code Libro}
-	 */
-	public String nombre;
-
-	/**
-	 * String autor autor del {@code Libro}
-	 */
-	public String autor;
-
-	// metodos o funciones
-
-	/**
-	 * Muestra por pantalla los atributos del Libro
-	 */
-	public String describete() {
-
-		return "nombre: " + this.nombre + " paginas: " + this.numeroPaginas + " autor: " + this.autor;
-	}
-
-	/**
-	 * Aumentamos el numero de paginas
+	/*
+	 * Constructores
 	 * 
-	 * @param numPaginas
-	 *            <code>int</code> numero paginas nuevas escritas
+	 * Sirven para instanciar objetos de las Clase <br> Tienen el mismo nombre
+	 * que la Clase No hace falta especificar el <code>return</code>
+	 * 
+	 * sobrecarga: es un metodo con el mismo nombre y mismo return, <br> pero
+	 * diferentes parametros
+	 * 
 	 */
-	public void escribir(int numPaginas) {
 
-		// this.numeroPaginas = this.numeroPaginas + numPaginas ;
-		this.numeroPaginas += numPaginas;
+	// constructor por defecto
+	public Libro() {
+		super();
+		this.numeroPaginas = 0;
+		this.titulo = "desconocido";
+		this.autor = "anonimo";
+	}
+
+	// constructor con parametros
+	public Libro(String titulo, int numeroPAginas) {
 
 	}
+
+	// getters y setters
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public String getAutor() {
+		return autor;
+	}
+
+	public void setAutor(String autor) {
+		this.autor = autor;
+	}
+
+	public int getNumeroPaginas() {
+		return numeroPaginas;
+	}
+
+	/**
+	 * En caso de ser negativo, seteamos a 0
+	 * 
+	 * @param numeroPaginas
+	 */
+	public void setNumeroPaginas(int numeroPaginas) {
+		this.numeroPaginas = (numeroPaginas < 0) ? 0 : numeroPaginas;
+	}
+
+	// otros metodos
 
 }
