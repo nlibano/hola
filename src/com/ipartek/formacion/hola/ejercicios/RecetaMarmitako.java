@@ -25,6 +25,9 @@ public class RecetaMarmitako {
 				
 		//mostrar por pantalla
 		System.out.println("Marmitako rico rigo, la receta es:");
+		if ( !marmitako.isGlutenFree() ){
+			System.out.println("***CONTIENE GLUTEN, atención alergicos");
+		}
 		System.out.println( marmitako.toString() );
 		
 		

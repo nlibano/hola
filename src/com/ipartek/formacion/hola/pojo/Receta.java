@@ -23,9 +23,24 @@ public class Receta {
 	}
 
 
-	//TODO realizar TEst e implementacion
+	
+	/**
+	 * Nos indica si la receta esta libre de ingredientes con gluten
+	 * @return true si todos los ingredientes no contienen gluten <br>
+	 *         false si alguno de los ingredientes contienen gluten <br>
+	 *         true si no existen ingredientes
+	 */
 	public boolean isGlutenFree(){
-		return false;
+		boolean resul = true;
+		if ( this.ingredientes != null ){
+			for (Ingrediente i : this.ingredientes) {
+				if ( i.isGluten() ){
+					resul = false;
+					break;
+				}
+			}
+		}	
+		return resul;
 	}
 	
 	public String getTitulo() {
