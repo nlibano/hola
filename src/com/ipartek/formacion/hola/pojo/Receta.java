@@ -43,6 +43,23 @@ public class Receta {
 		return resul;
 	}
 	
+	
+	public void addIngrendiente( Ingrediente ingrendiente ){
+		
+	}
+	
+	/**
+	 * Eliminar el primer ingrendiente que encuentre con el mismo <ode>nombre</code> CaseInsesitive
+	 * @param ingrendiente ingrediente a eliminar
+	 * @return true si eliminar ingrediente<br>
+	 *         false en caso contrario	  
+	 */
+	public boolean removeIngrendiente( Ingrediente ingrendiente ){
+		return false;
+	}
+	
+	
+	
 	public String getTitulo() {
 		return titulo;
 	}
