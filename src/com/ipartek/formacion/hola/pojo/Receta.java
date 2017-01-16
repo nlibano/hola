@@ -52,7 +52,17 @@ public class Receta {
 	 *         false en caso contrario
 	 */
 	public boolean contiene(Ingrediente ingrendiente) {
-		return false;
+		boolean resul = false;
+		if (ingrendiente != null) {
+			final String NOMBRE_RECETA_BUSCAR = ingrendiente.getNombre();
+			for (Ingrediente iterateIngredient : ingredientes) {
+				if (NOMBRE_RECETA_BUSCAR.equalsIgnoreCase(iterateIngredient.getNombre())) {
+					resul = true;
+					break;
+				}
+			}
+		}
+		return resul;
 	}
 
 	/**
