@@ -17,7 +17,7 @@ public class EjercicioConcesionario {
 	public static void main(String[] args) {
 		// crear vehiculos
 
-		ArrayList<Vehiculo> vehiculos = new ArrayList<Vehiculo>();
+		ArrayList<Vehiculo> stock = new ArrayList<Vehiculo>();
 
 		Vehiculo prius = new Vehiculo("Prius");
 		prius.setPlazas(5);
@@ -52,16 +52,28 @@ public class EjercicioConcesionario {
 		opelAstra.setPotencia(120);
 		opelAstra.setCombustible(98);
 
-		vehiculos.add(prius);
-		vehiculos.add(ibiza);
-		vehiculos.add(fordFiesta);
-		vehiculos.add(tesla);
-		vehiculos.add(citroenSara);
-		vehiculos.add(opelAstra);
+		stock.add(prius);
+		stock.add(ibiza);
+		stock.add(fordFiesta);
+		stock.add(tesla);
+		stock.add(citroenSara);
+		stock.add(opelAstra);
 
 		// mostrar por pantalla
 
-		System.out.println();
+		for (Vehiculo vehiculo : stock) {
+			// System.out.println(vehiculo.toString());
+			// System.out.println();
+			System.out.println("Modelo: " + vehiculo.getModelo());
+
+			if (vehiculo instanceof VehiculoElectrico) {
+				System.out.println("Capacidad Baterias: " + ((VehiculoElectrico) vehiculo).getCapacidadBaterias());
+			} else if (vehiculo instanceof VehiculoDiesel) {
+				System.out.println("Combustible: " + ((VehiculoDiesel) vehiculo).getCombustible());
+			}
+
+			System.out.println("--------------------------------");
+		}
 
 	}
 
