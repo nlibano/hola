@@ -4,7 +4,10 @@ import java.util.ArrayList;
 
 public class Receta {
 
+	public String IMG_DEFAULT = "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTL2S54Ap4S75SGm_NkKABfA3DRAGU-vKZu5QzlrwlDWM7oL0sYDg";
+
 	private String titulo;
+	private String imagen;
 	// private Ingrediente[] ingredientes;
 	private ArrayList<Ingrediente> ingredientes;
 	private int tiempo;
@@ -12,9 +15,21 @@ public class Receta {
 	private int comensales;
 	private String descripcion;
 
+	public Receta(String titulo) {
+		super();
+		this.titulo = titulo;
+		this.imagen = IMG_DEFAULT;
+		setIngredientes(null);
+		this.tiempo = 0;
+		this.comensales = 0;
+		this.dificultad = "facil";
+		this.descripcion = "Lorem ipsum....";
+	}
+
 	public Receta(String titulo, ArrayList<Ingrediente> ingredientes) {
 		super();
 		this.titulo = titulo;
+		this.imagen = IMG_DEFAULT;
 		// this.ingredientes = ingredientes;
 		setIngredientes(ingredientes);
 		this.tiempo = 0;
@@ -153,10 +168,19 @@ public class Receta {
 		this.descripcion = descripcion;
 	}
 
+	public String getImagen() {
+		return imagen;
+	}
+
+	public void setImagen(String imagen) {
+		this.imagen = imagen;
+	}
+
 	@Override
 	public String toString() {
-		return "Receta [titulo=" + titulo + ", ingredientes=" + ingredientes + ", tiempo=" + tiempo + ", dificultad="
-				+ dificultad + ", comensales=" + comensales + ", descripcion=" + descripcion + "]";
+		return "Receta [titulo=" + titulo + ", imagen=" + imagen + ", ingredientes=" + ingredientes + ", tiempo="
+				+ tiempo + ", dificultad=" + dificultad + ", comensales=" + comensales + ", descripcion=" + descripcion
+				+ "]";
 	}
 
 }
