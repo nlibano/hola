@@ -1,10 +1,6 @@
-package com.ipartek.formacion.hola.ejercicios;
+package com.ipartek.formacion.recetas.ejercicios.herencia;
 
 import java.util.ArrayList;
-
-import com.ipartek.formacion.recetas.ejercicios.herencia.Vehiculo;
-import com.ipartek.formacion.recetas.ejercicios.herencia.VehiculoDiesel;
-import com.ipartek.formacion.recetas.ejercicios.herencia.VehiculoElectrico;
 
 /**
  * Listar todos los Vehiculos del concesionario
