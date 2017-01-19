@@ -2,7 +2,11 @@ package com.ipartek.formacion.hola.pojo;
 
 import java.util.ArrayList;
 
-public class Receta {
+public class Receta implements Comparable<Receta> {
+
+	public static final String FACIL = "facil";
+	public static final String DIFICIL = "dificil";
+	public static final String MODERADO = "moderado";
 
 	public String IMG_DEFAULT = "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTL2S54Ap4S75SGm_NkKABfA3DRAGU-vKZu5QzlrwlDWM7oL0sYDg";
 
@@ -181,6 +185,21 @@ public class Receta {
 		return "Receta [titulo=" + titulo + ", imagen=" + imagen + ", ingredientes=" + ingredientes + ", tiempo="
 				+ tiempo + ", dificultad=" + dificultad + ", comensales=" + comensales + ", descripcion=" + descripcion
 				+ "]";
+	}
+
+	/*
+	 * @Override public int compare(Receta r1, Receta r2) {
+	 * 
+	 * return r1.getTitulo().compareTo(r2.getTitulo());
+	 * 
+	 * }
+	 */
+
+	@Override
+	// Compara el elmento actual con el siguiente elemento y ordena por titulo.
+	public int compareTo(Receta o) {
+		// pasamos a .lowercase, para ignorar mayusculas y minusculas.
+		return this.getTitulo().toLowerCase().compareTo(o.getTitulo().toLowerCase());
 	}
 
 }

@@ -1,5 +1,7 @@
 package com.ipartek.formacion.hola;
 
+import java.util.Arrays;
+
 /**
  * Clase {@code Utilidades} con metodos estaticos y comunues.<br>
  * Por ejemplo: generar numeros aleatorios, validaciones etc
@@ -47,6 +49,15 @@ public class Utilidades {
 		} while (existeCambio);
 
 		return aDesordenado;
+
+	}
+
+	static public int[] bubbleSort2(int[] aDesordenado) {
+
+		Arrays.sort(aDesordenado);
+
+		return aDesordenado;
+
 	}
 
 	/**

@@ -1,6 +1,6 @@
 package com.ipartek.formacion.recetas.ejercicios.herencia;
 
-public class Vehiculo implements Conducible {
+public class Vehiculo implements Conducible, IEstupida {
 
 	private String modelo;
 	private int plazas;
@@ -74,6 +74,11 @@ public class Vehiculo implements Conducible {
 	public String toString() {
 		return "Vehiculo [modelo=" + modelo + ", plazas=" + plazas + ", dimensiones=" + dimensiones + ", potencia="
 				+ potencia + "]";
+	}
+
+	@Override
+	public void getPeso() {
+		System.out.println("Potencia = " + this.potencia);
 	}
 
 }
