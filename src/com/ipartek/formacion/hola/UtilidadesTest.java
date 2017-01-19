@@ -26,6 +26,8 @@ public class UtilidadesTest {
 
 		// jugar con valores nulos
 
+		// assertNotNull("existen nulos en el array", aDesordenado[0]);
+
 	}
 
 	@Test

@@ -27,6 +27,25 @@ public class Utilidades {
 	 * @return
 	 */
 	static public int[] bubbleSort(int[] aDesordenado) {
+
+		int cambio = 0;
+		boolean existeCambio; // ha este tipo de variables se les llama flag
+								// (banderitas)
+
+		do {
+			existeCambio = false;
+			for (int i = 0; i < aDesordenado.length - 1; i++) {
+				// cambiar < para ordenacion --> ordena de forma descendente.
+				if (aDesordenado[i] > aDesordenado[i + 1]) {
+					cambio = aDesordenado[i + 1];
+					aDesordenado[i + 1] = aDesordenado[i];
+					aDesordenado[i] = cambio;
+					existeCambio = true; // Hay numeros sin ordenar, continuamos
+											// ordenando.
+				}
+			}
+		} while (existeCambio);
+
 		return aDesordenado;
 	}
 
