@@ -41,13 +41,13 @@ public class ComparacionesTest {
 		ingredientes.add(new Ingrediente("ajo", 1, false));
 		marmitako.setIngredientes(ingredientes);
 
-		ingredientes.clear();
+		ingredientes = new ArrayList<Ingrediente>();
 		ingredientes.add(new Ingrediente("huevo", 4, false));
 		ingredientes.add(new Ingrediente("cebolla", 1, false));
 		ingredientes.add(new Ingrediente("patatas", 6, false));
 		tortillaPatatas.setIngredientes(ingredientes);
 
-		ingredientes.clear();
+		ingredientes = new ArrayList<Ingrediente>();
 		ingredientes.add(new Ingrediente("solomillo", 2, false));
 		solomillo.setIngredientes(ingredientes);
 

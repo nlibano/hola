@@ -7,11 +7,7 @@ public class ComparatorNumeroIngredientes implements Comparator<Receta> {
 	@Override
 	public int compare(Receta o1, Receta o2) {
 
-		return 0;
+		return o1.getIngredientes().size() - o2.getIngredientes().size();
 	}
 
-	private int getNumIngredientes(Receta r) {
-
-		return 0;
-	}
 }
