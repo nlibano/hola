@@ -47,7 +47,9 @@ public class Pajaro extends Animal implements Vendible, Volador, IEstupida {
 	}
 
 	@Override
-	public void getPeso() {
-		System.out.println("Numero de huevos a la semana: " + this.numHuevosSemana);
+	public int getPeso() {
+		// System.out.println("Numero de huevos a la semana: " +
+		// this.numHuevosSemana);
+		return this.numHuevosSemana;
 	}
 }

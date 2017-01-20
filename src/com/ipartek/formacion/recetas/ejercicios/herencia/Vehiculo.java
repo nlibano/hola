@@ -77,8 +77,9 @@ public class Vehiculo implements Conducible, IEstupida {
 	}
 
 	@Override
-	public void getPeso() {
-		System.out.println("Potencia = " + this.potencia);
+	public int getPeso() {
+		// System.out.println("Potencia = " + this.potencia);
+		return (int) this.getPotencia();
 	}
 
 }

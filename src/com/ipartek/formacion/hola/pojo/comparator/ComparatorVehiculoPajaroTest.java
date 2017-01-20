@@ -1,4 +1,4 @@
-package com.ipartek.formacion.hola.pojo;
+package com.ipartek.formacion.hola.pojo.comparator;
 
 import static org.junit.Assert.assertEquals;
 
@@ -17,7 +17,7 @@ import com.ipartek.formacion.recetas.ejercicios.herencia.Vehiculo;
 
 public class ComparatorVehiculoPajaroTest {
 
-	ArrayList<IEstupida> i = new ArrayList<IEstupida>();
+	ArrayList<IEstupida> iEstupida = new ArrayList<IEstupida>();
 
 	Vehiculo seat = new Vehiculo();
 	Vehiculo fordK = new Vehiculo();
@@ -36,20 +36,25 @@ public class ComparatorVehiculoPajaroTest {
 	@Before
 	public void setUp() throws Exception {
 		kiwi.setNumHuevosSemana(2);
+
 		gallina.setNumHuevosSemana(700);
+
+		seat.setModelo("seat");
 		seat.setPotencia(500.33f);
+
+		fordK.setModelo("Ford k");
 		fordK.setPotencia(100);
 
-		i.add(kiwi);
-		i.add(gallina);
-		i.add(seat);
-		i.add(fordK);
+		iEstupida.add(kiwi);
+		iEstupida.add(gallina);
+		iEstupida.add(seat);
+		iEstupida.add(fordK);
 
 	}
 
 	@After
 	public void tearDown() throws Exception {
-		i = null;
+		iEstupida = null;
 		seat = null;
 		fordK = null;
 		kiwi = null;
@@ -60,12 +65,12 @@ public class ComparatorVehiculoPajaroTest {
 	public void testComparator() {
 		final String MSG_ERROR_POTENCIA_HUEVOS_SEM = "No ordena por potencia ni por numero de huvos semana";
 
-		Collections.sort(i, new ComparatorPotenciaNumHuevoSemana());
+		Collections.sort(iEstupida, new ComparatorPotenciaNumHuevoSemana());
 
-		assertEquals(MSG_ERROR_POTENCIA_HUEVOS_SEM, kiwi, i.get(0));
-		assertEquals(MSG_ERROR_POTENCIA_HUEVOS_SEM, fordK, i.get(1));
-		assertEquals(MSG_ERROR_POTENCIA_HUEVOS_SEM, seat, i.get(2));
-		assertEquals(MSG_ERROR_POTENCIA_HUEVOS_SEM, gallina, i.get(3));
+		assertEquals(MSG_ERROR_POTENCIA_HUEVOS_SEM, kiwi, iEstupida.get(0));
+		assertEquals(MSG_ERROR_POTENCIA_HUEVOS_SEM, fordK, iEstupida.get(1));
+		assertEquals(MSG_ERROR_POTENCIA_HUEVOS_SEM, seat, iEstupida.get(2));
+		assertEquals(MSG_ERROR_POTENCIA_HUEVOS_SEM, gallina, iEstupida.get(3));
 	}
 
 }

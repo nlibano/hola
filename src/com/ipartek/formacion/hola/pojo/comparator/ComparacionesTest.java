@@ -1,4 +1,4 @@
-package com.ipartek.formacion.hola.pojo;
+package com.ipartek.formacion.hola.pojo.comparator;
 
 import static org.junit.Assert.assertEquals;
 
@@ -10,6 +10,9 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+
+import com.ipartek.formacion.hola.pojo.Ingrediente;
+import com.ipartek.formacion.hola.pojo.Receta;
 
 public class ComparacionesTest {
 
